@@ -19,8 +19,12 @@ public class StringMain1 {
 //		System.out.println(str1.equals(str2));
 //		System.out.println(str1.equals(str3));
 		
-		StringStudy ss = new StringStudy();
-		ss.studyCharAt();
+//		StringStudy ss = new StringStudy();
+//		ss.studyCharAt();
+		
+		StringStudy2 st2 = new StringStudy2();
+		//st2.studyIndexofEx1();
+		st2.ex2();
 
 	}
 
