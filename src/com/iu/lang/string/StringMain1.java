@@ -22,10 +22,16 @@ public class StringMain1 {
 //		StringStudy ss = new StringStudy();
 //		ss.studyCharAt();
 		
-		StringStudy2 st2 = new StringStudy2();
-		//st2.studyIndexofEx1();
-		st2.ex2();
-
+//		StringStudy2 st2 = new StringStudy2();
+//		st2.studyIndexofEx1();
+//		st2.ex2();
+		
+		StringStudy3 s3 = new StringStudy3();
+		s3.studySplit();
+		s3.StudySplit2();
+		s3.StudySplit3();
+		
+		
 	}
 
 }
