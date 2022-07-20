@@ -22,7 +22,17 @@ public class WrapperEx2 {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("주민번호를 \"-\"를 포함하여 입력해주세요");
 		String jumin = sc.next();
-		//String jumin = "971124-1234567";
+		
+		//1. subString()	: String
+//		String num = jumin.substring(0,1);
+//		int n = Integer.parseInt(num);
+//		2. charAt()		: char
+//		(1) int n = Integer.parseInt(ch + "");
+//		String num = String.valueOf(ch);
+//		int n = Integer.parseInt(num);
+//		위 두 줄을 한 줄로 만드려면? -> 내가 한 것 처럼
+		
+//		String jumin = "971124-1234567";
 		int sum = 0;
 		int j = 2;
 		for(int i = 0; i < jumin.length() - 1; i++) {
