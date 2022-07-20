@@ -14,10 +14,11 @@ public class WeatherView {
 	
 	public void view(ArrayList<CityDTO> ar) {
 		for(int i = 0; i < ar.size(); i++) {
-			System.out.println(ar.get(i).getName());
-			System.out.println(ar.get(i).getGion());
-			System.out.println(ar.get(i).getHum());
-			System.out.println(ar.get(i).getStatus());
+//			System.out.println(ar.get(i).getName());
+//			System.out.println(ar.get(i).getGion());
+//			System.out.println(ar.get(i).getHum());
+//			System.out.println(ar.get(i).getStatus());
+			this.view(ar.get(i));
 		}
 	}
 		
@@ -30,6 +31,8 @@ public class WeatherView {
 	}
 	
 	public void view(String ms) {
+		System.out.println(ms);
+	}
 		
 		
 		
@@ -41,7 +44,6 @@ public class WeatherView {
 //		System.out.println("5. 지역 정보 삭제");
 //		System.out.println("6. 종	료");
 //		System.out.println("메뉴를 선택하세요");
-	}
 		
 
 }

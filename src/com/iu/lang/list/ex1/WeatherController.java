@@ -19,11 +19,19 @@ public class WeatherController {
 		WeatherService ws = new WeatherService();
 		WeatherView wv = new WeatherView();
 		String ms = null;
+		
 //		CityDTO dto = new CityDTO();
 		boolean check = true;
 		
 		while(check) {
-		wv.view(ms);
+			System.out.println("1. 날씨 정보 초기화");
+			System.out.println("2. 전국 날씨 출력");
+			System.out.println("3. 지역 날씨 검색");
+			System.out.println("4. 지역 정보 추가");
+			System.out.println("5. 지역 정보 삭제");
+			System.out.println("6. 종	료");
+			System.out.println("메뉴를 선택하세요");
+		//wv.view(ms);
 		int num = sc.nextInt();
 			
 		if(num == 1) {
