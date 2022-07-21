@@ -17,7 +17,7 @@ public class WrapperEx1 {
 		Scanner sc = new Scanner(System.in);
 //		System.out.println("주민등록번호를 \"-\"를 포함하여 입력해주세요");
 //		String num = sc.next();
-		String num = "220327-301011";
+		String num = "940327-101011";
 		String [] nums = num.split("-");
 //		for(String names: nums) {
 //			System.out.println(names);
@@ -40,6 +40,19 @@ public class WrapperEx1 {
 			result = 2022 - Integer.parseInt(age);
 		}
 		System.out.println(result + "살 입니다");
+		
+		int month = Integer.parseInt(nums[0].substring(2,4));
+		System.out.println(month);
+		if(month >= 3 || month <= 5) {
+			System.out.println("봄");
+		}else if(month >= 6 || month <=8) {
+			System.out.println("여름");
+		}else if(month >=9 || month <= 11) {
+			System.out.println("가을");
+		}else {
+			System.out.println("겨울");
+		}
+		
 		
 		
 		
