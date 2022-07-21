@@ -55,14 +55,21 @@ public class WeatherService {
 	
 	public void remove(ArrayList<CityDTO> ar) {
 		System.out.println("삭제하려는 도시명을 입력하세요");
-		String name = sc.next();
+		String name = sc.next().toUpperCase();
 		String result = "일치하는 정보가 없습니다";
 		for(int i = 0; i < ar.size(); i++) {
-			if(name.equals(ar.get(i).getName())) {
+			if(name.equals(ar.get(i).getName().toUpperCase())) {
 				ar.remove(i);
 				result = "해당도시의 정보가 삭제되었습니다";
 			}
 		}
+		
+//		향상된 for문
+//		for(CityDTO cityDTO: ar) {
+//			if(name.equals(cityDTO.getName())) {
+//				ar.remove(cityDTO);
+//			}
+//		}
 			System.out.println(result);
 	}
 	
@@ -71,10 +78,10 @@ public class WeatherService {
 	
 	public CityDTO find(ArrayList<CityDTO> ar) {
 		System.out.println("찾으려는 도시명을 입력하세요");
-		String name = sc.next();
+		String name = sc.next().toLowerCase();
 		CityDTO result = null;
 		for(int i = 0; i < ar.size(); i++) {
-			if(name.equals(ar.get(i).getName())) {
+			if(name.equals(ar.get(i).getName().toLowerCase())) {
 				result = ar.get(i);
 			}
 		}

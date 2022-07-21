@@ -15,8 +15,9 @@ public class WrapperEx1 {
 	
 	public void ex1() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("주민등록번호를 \"-\"를 포함하여 입력해주세요");
-		String num = sc.next();
+//		System.out.println("주민등록번호를 \"-\"를 포함하여 입력해주세요");
+//		String num = sc.next();
+		String num = "220327-301011";
 		String [] nums = num.split("-");
 //		for(String names: nums) {
 //			System.out.println(names);
@@ -28,6 +29,20 @@ public class WrapperEx1 {
 		}else {
 			System.out.println("여자입니다");
 		}
+		
+		int result = 0;
+		String age = nums[0].substring(0, 2);
+		if(a == '1' || a == '2') {
+			age = "19" + age;
+			result = 2022 - Integer.parseInt(age);
+		}else {
+			age = "20" + age;
+			result = 2022 - Integer.parseInt(age);
+		}
+		System.out.println(result + "살 입니다");
+		
+		
+		
 		
 		
 	}

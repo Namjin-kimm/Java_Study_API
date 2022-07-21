@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class WeatherController {
-	Scanner sc = new Scanner(System.in);
+	private Scanner sc;
+	private WeatherService ws;
+	private WeatherView wv;
 	//WeatherController
 		//start 메서드
 		//1. 날씨 정보 초기화 - init메서드 호출
@@ -16,8 +18,8 @@ public class WeatherController {
 	
 	public void start() {
 		ArrayList<CityDTO> ar = new ArrayList<>();
-		WeatherService ws = new WeatherService();
-		WeatherView wv = new WeatherView();
+		this.ws = new WeatherService();
+		this.wv = new WeatherView();
 		String ms = null;
 		
 //		CityDTO dto = new CityDTO();
@@ -32,7 +34,8 @@ public class WeatherController {
 			System.out.println("6. 종	료");
 			System.out.println("메뉴를 선택하세요");
 		//wv.view(ms);
-		int num = sc.nextInt();
+			this.sc = new Scanner(System.in);
+		int num = this.sc.nextInt();
 			
 		if(num == 1) {
 			ws.init(ar);

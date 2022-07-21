@@ -56,8 +56,11 @@ public class WrapperMain1 {
 //		
 //		System.out.println(n+2);
 		
-		WrapperEx2 ex2 = new WrapperEx2();
-		ex2.juminCheck();
+//		WrapperEx2 ex2 = new WrapperEx2();
+//		ex2.juminCheck();
+		
+		WrapperEx1 ex = new WrapperEx1();
+		ex.ex1();
 		
 		
 		
