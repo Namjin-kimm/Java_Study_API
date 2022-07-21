@@ -1,4 +1,4 @@
-package com.iu.lang.list.ex1;
+package com.iu.lang.util.ex1;
 
 public class CityDTO {
 	//도시의 날씨 정보

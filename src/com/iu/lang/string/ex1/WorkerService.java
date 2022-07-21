@@ -31,7 +31,7 @@ public class WorkerService {
 //		}
 		
 //		String newInfo = this.sb.toString().replace(",","-");
-		
+//		
 //		String [] infos = newInfo.split("-");
 		
 //		WorkerDTO [] workerDTOs = new WorkerDTO[infos.length/4];

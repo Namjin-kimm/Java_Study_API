@@ -1,4 +1,4 @@
-package com.iu.lang.list.ex1;
+package com.iu.lang.util.ex1;
 
 import java.util.ArrayList;
 import java.util.Scanner;
