@@ -14,29 +14,52 @@ public class Server1 {
 	
 	public void receive() throws Exception {
 		Scanner sc = new Scanner(System.in);
-		ServerSocket serverSocket = new ServerSocket(8282);
+		boolean check = true;
+		OutputStream os = null; //0,1
+		OutputStreamWriter ow = null;
+		BufferedWriter bw = null;
+		InputStream is = null;
+		InputStreamReader ir = null;
+		BufferedReader br = null;
+		Socket socket = null;
+		ServerSocket serverSocket = null;
+		while(check) {
+		serverSocket = new ServerSocket(8282);
 		//서버 오픈하고 Client의 접속을 기다립니다
 		System.out.println("Client 접속 기다리는 중");
 		//Socket : 상대방과 1:1 통신
 		
-		Socket socket = serverSocket.accept();
+		socket = serverSocket.accept();
 		System.out.println("Client 접속 완료");
-		InputStream is = socket.getInputStream();
-		InputStreamReader ir = new InputStreamReader(is);
-		BufferedReader br = new BufferedReader(ir);
+		is = socket.getInputStream();
+		ir = new InputStreamReader(is);
+		br = new BufferedReader(ir);
 		String message = br.readLine();
-		System.out.println("Client : " + message);
+		if(message.toLowerCase().equals("q")) {
+//			check = !check;
+//			System.out.println("서버를 종료합니다");
+			break;
+		}else {
+			System.out.println("Client : " + message);
+		}
 		
 		System.out.println("Client로 보낼 메세지 입력");
 		String message2 = sc.next();
+		if(message2.toLowerCase().equals("q")) {
+			check = !check;
+			System.out.println("서버를 종료합니다");
+			break;
+		}
 		
-		OutputStream os = socket.getOutputStream(); //0,1
-		OutputStreamWriter ow = new OutputStreamWriter(os);
-		BufferedWriter bw = new BufferedWriter(ow);
+		os = socket.getOutputStream(); //0,1
+		ow = new OutputStreamWriter(os);
+		bw = new BufferedWriter(ow);
 		
 		//전송
 		bw.write(message2 + "\r\n");
 		bw.flush();
+		}
+		
 		
 		
 		br.close();
